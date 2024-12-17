@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
@@ -8,7 +8,7 @@ import Plans from './pages/Plans';
 import Chat from './pages/Chat';
 import VideoChat from './pages/VideoChat';
 import Contact from './pages/Contact';
-
+import Profile  from './pages/Profile';
 function App() {
   return (
     <Router>
@@ -21,6 +21,7 @@ function App() {
             <Route path="/chat" element={<Chat />} />
             <Route path="/video" element={<VideoChat />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
         <Footer />

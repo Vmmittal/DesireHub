@@ -42,9 +42,12 @@ const Navbar = () => {
               <button className="p-2 hover:bg-pink-500/10 rounded-full transition">
                 <MessageCircle className="h-6 w-6" />
               </button>
-              <button className="p-2 hover:bg-pink-500/10 rounded-full transition">
+              {/* <button className="p-2 hover:bg-pink-500/10 rounded-full transition">
                 <User className="h-6 w-6" />
-              </button>
+              </button> */}
+              <Link to="/profile" className="p-2 hover:bg-pink-500/10 rounded-full transition">
+              <User className="h-6 w-6" />
+            </Link>
               <button
                 onClick={() => openAuthModal('login')}
                 className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition"
