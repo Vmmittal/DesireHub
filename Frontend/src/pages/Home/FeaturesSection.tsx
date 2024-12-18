@@ -63,6 +63,8 @@ const FeaturesSection = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+          whileHover={{ scale: 1.05 }}
+
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
@@ -70,7 +72,9 @@ const FeaturesSection = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 hover:border-pink-500/50 transition-colors duration-300"
+          whileHover={{ scale: 1.05 }}
+
+              className="group relative p-8 hover:scale-125 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] backdrop-blur-sm border-white/10 hover:border-pink-500/50 transition-colors duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-pink-500/0 to-pink-500/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
               <div className="relative z-10">

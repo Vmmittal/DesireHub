@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
               <button
                 onClick={() => openAuthModal('login')}
-                className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition"
+                className=" bg-pink-500 text-white px-2 py-1 md:px-4 md:py-2 rounded-full hover:bg-pink-600 transition"
               >
                 Get Started
               </button>
