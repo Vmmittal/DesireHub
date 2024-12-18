@@ -4,6 +4,10 @@ import ProfileHeader from './ProfileHeader';
 import ProfileInfo from './ProfileInfo';
 import ProfileGallery from './ProfileGallery';
 import ProfileStats from './ProfileStats';
+import { MessageCircle } from 'lucide-react';
+import Card from '../../components/ui/Card';
+import { Heart, User } from 'lucide-react';
+
 
 // Mock user data (replace with actual user data from your backend)
 const userData = {
@@ -30,8 +34,28 @@ const userData = {
 };
 
 const Profile = () => {
+  const isProfile = false;
   return (
-    <motion.div
+    isProfile ? (
+      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* <MessageCircle className="h-16 w-16 text-pink-500 mx-auto mb-6" /> */}
+         <User className="h-16 w-16 text-pink-500 mx-auto mb-6" />
+
+        <h1 className="text-4xl font-bold mb-4">Profile Coming Soon</h1>
+        <p className="text-xl text-gray-400 mb-8">
+          Profile currently under development. Check back soon!
+        </p>
+        {/* <Card className="max-w-2xl mx-auto">
+          <p className="text-gray-300">
+            The chat feature will include real-time messaging, photo sharing, and end-to-end encryption
+            to ensure your conversations remain private and secure.
+          </p>
+        </Card> */}
+      </div>
+    </div>
+    ):
+      <motion.div
       initial={{ x: '100%' }}
       animate={{ x: 0 }}
       exit={{ x: '100%' }}

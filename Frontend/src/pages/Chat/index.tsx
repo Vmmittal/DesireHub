@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import Card from '../../components/ui/Card';
 
+
 const Chat = () => {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">

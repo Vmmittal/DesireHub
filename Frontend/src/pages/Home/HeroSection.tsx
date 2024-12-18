@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
+// import { TypeAnimation } from 'react-type-animation';
+import ExampleComponent from './TypingAnimation';
+import Typewriter from "typewriter-effect";
 
 const HeroSection = () => {
   return (
@@ -33,36 +36,53 @@ const HeroSection = () => {
       
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        {/* <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1,x: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
           <Heart className="h-16 w-16 text-pink-500 mx-auto mb-6" />
-        </motion.div>
+        </motion.div>  */}
 
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        {/* <motion.h1 
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl sm:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500"
         >
           Where Fantasies Meet Reality
-        </motion.h1>
+        </motion.h1> */}
+        <div className="text-3xl sm:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
+          <Typewriter
+                onInit={(typewriter) => {
+                    typewriter
+                        .typeString("Welcome to DesireHub")
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString("Where Fantasies Meet Reality")
+                        .start();
+                }}
+                
+            /> 
+        </div>
+        <div className="text-lg sm:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+        <ExampleComponent />
+
+        </div>
         
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        {/* <motion.p 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
         >
           Join our global community and explore meaningful connections in a safe, secure environment.
-        </motion.p>
+        </motion.p> */}
         
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
@@ -124,7 +144,7 @@ const FloatingHearts = () => {
           initial={{ y: '100vh', x: `${heart.left}vw`, opacity: 0 }}
           animate={{ 
             y: '-100vh',
-            opacity: [0, 1, 0],
+            opacity: [0, 1, 1],
             x: `calc(${heart.left}vw + ${Math.sin(heart.id) * 100}px)`
           }}
           transition={{ 
