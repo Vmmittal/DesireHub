@@ -6,7 +6,6 @@ export interface User {
   bio: string;
   imageUrl: string;
   interests: string[];
-  isFollowing?: boolean;
 }
 
 export interface Plan {
@@ -16,9 +15,4 @@ export interface Plan {
   features: string[];
   duration: string;
   popular?: boolean;
-}
-
-export interface AuthResponse {
-  user: User;
-  message?: string;
 }
