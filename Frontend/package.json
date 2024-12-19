@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "serve": "vite --port 3004"
+    "serve": "vite --port 3003"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",

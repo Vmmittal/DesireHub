@@ -9,6 +9,7 @@ import Chat from './pages/Chat';
 import VideoChat from './pages/VideoChat';
 import Contact from './pages/Contact';
 import Profile  from './pages/Profile';
+
 function App() {
   return (
     <Router>
