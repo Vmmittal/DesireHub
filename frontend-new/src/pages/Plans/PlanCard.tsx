@@ -2,12 +2,16 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import Button from '../../components/ui/Button';
 import { Plan } from '../../types';
+import AuthModal from '../../components/auth/AuthModal';
+
+import { useAuth } from '../../components/auth/hooks/useAuth';
 
 interface PlanCardProps {
   plan: Plan;
 }
 
 const PlanCard = ({ plan }: PlanCardProps) => {
+   const { isAuthModalOpen, authModalView, openAuthModal, closeAuthModal } = useAuth();
   return (
     <div className={`relative ${plan.popular ? 'border-2 border-pink-500' : 'border border-gray-800'} rounded-xl p-6`}>
       {plan.popular && (
@@ -28,9 +32,14 @@ const PlanCard = ({ plan }: PlanCardProps) => {
           </li>
         ))}
       </ul>
-      <Button to="/register" variant={plan.popular ? 'primary' : 'secondary'} className="w-full">
+      <Button onClick={() => openAuthModal('login')} variant={plan.popular ? 'primary' : 'secondary'} className="w-full">
         Get Started
       </Button>
+       <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={closeAuthModal}
+        initialView={authModalView}
+      />
     </div>
   );
 };
