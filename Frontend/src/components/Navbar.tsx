@@ -39,9 +39,13 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <button className="p-2 hover:bg-pink-500/10 rounded-full transition">
+              {/* <button className="p-2 hover:bg-pink-500/10 rounded-full transition">
                 <MessageCircle className="h-6 w-6" />
-              </button>
+              </button> */}
+              {/* <Link to="/chat" className="p-2 hover:bg-pink-500/10 rounded-full transition">
+                              <MessageCircle className="h-6 w-6" />
+
+            </Link> */}
               {/* <button className="p-2 hover:bg-pink-500/10 rounded-full transition">
                 <User className="h-6 w-6" />
               </button> */}

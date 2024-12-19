@@ -2,7 +2,7 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import FeaturesSection from './FeaturesSection';
 import CTASection from './CTASection';
-import Test from '../Test/test';
+
 
 const Home = () => {
   return (
@@ -10,7 +10,6 @@ const Home = () => {
       <HeroSection />
       <FeaturesSection />
       <CTASection />
-      <Test />
     </div>
   );
 };
